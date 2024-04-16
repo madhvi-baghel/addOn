@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('./fonts/NeueMontreal-Regular.otf')
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+ width: 100%;
+ height: 100%;
+ font-family: "Neue Montreal";
+}
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    z-index: 1000;
+    /* mix-blend-mode: difference; */
+}
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+img{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.marquee-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.marquee-wrapper.t-1{
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+h1{
+    position: absolute;
+    top: 50%;
+    left: -55%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 240px;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 100%;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+    -webkit-animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    0%{ transform:translate(0%, -50%);}
+    50%{ transform:translate(-5%, -50%); -webkit-transform:translate(-5%, -50%); -moz-transform:translate(-5%, -50%); -ms-transform:translate(-5%, -50%); -o-transform:translate(-5%, -50%); }
+    50.5%{ transform:translate(-5%, -50%); }
+    100%{ transform:translate(0%, -50%);}
+}
+.model {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 600px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.model-image{
+    width: 100%;
+    height: 500px;
+    
+}
+.role{
+    margin: 5px 0;
+}
+.img{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.img#t-1{
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+.info{
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+.t-1{
+    background: #fff;
+}
+.t-2{
+    background: #c4bca9;
+}
+.t-3{
+    background: #fff;
+}
+.t-1{
+    background: #8e908a;
+}
+@media(max-width: 900px){
+    .model{
+        width: 400px;
+        height: 600px;
+    }
+    .model-image{
+        width: 100%;
+        height: 500px;
+    }
+    .img{
+        width: 100%;
+        height: 500px;
+    }
+}
